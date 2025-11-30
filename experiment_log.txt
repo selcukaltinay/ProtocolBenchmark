@@ -1,0 +1,4015 @@
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+Deney Başlıyor...
+Toplam Kombinasyon: 4320
+Ortam hazırlanıyor...
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=26.22ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=51.25ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=144.51ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=816.19ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=27.12ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=49.58ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=141.07ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=874.18ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=50.95ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=79.93ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=152.70ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=860.84ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=49.59ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=535.55ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=143.87ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=50kbit, Loss=10%, Delay=500ms
+Result: Delivery=80.00%, Latency=1031.14ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=14.66ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=39.74ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=137.02ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=937.52ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=37.05ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=41.39ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=136.26ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=715.05ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=14.76ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=39.98ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=248.83ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=745.66ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=60.35ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=69.67ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=136.99ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=100kbit, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=1661.71ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=6.95ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=34.11ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=125.22ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=792.60ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=7.19ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=34.94ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=125.57ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=809.91ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=28.63ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=60.82ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=127.53ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=5%, Delay=500ms
+Result: Delivery=80.00%, Latency=1905.54ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=10%, Delay=0ms
+Result: Delivery=120.00%, Latency=2191.15ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=89.36ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=10%, Delay=100ms
+Result: Delivery=80.00%, Latency=425.52ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=250kbit, Loss=10%, Delay=500ms
+Result: Delivery=120.00%, Latency=4554.58ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=3.17ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=28.92ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=124.09ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=730.55ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=3.55ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=31.58ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=125.06ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=732.68ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=3.42ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=55.09ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=127.23ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=5%, Delay=500ms
+Result: Delivery=70.00%, Latency=895.20ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=10%, Delay=0ms
+Result: Delivery=130.00%, Latency=1624.05ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=82.62ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=138.94ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=1mbit, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=906.08ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=1.50ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=1.52ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=1.55ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=1.52ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=1.61ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=1.56ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=1.49ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=1.39ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=1.41ms==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=1.73ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=1.17ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=1.50ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=1.61ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=1.51ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=1.20ms
+Running: Proto=mqtt, Size=16, Rate=1, BW=0, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=1.24ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=23.59ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=45.90ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=258.97ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=1179.71ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=25.34ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=72.94ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=260.36ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=2762.61ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=39.74ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=145.62ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=507.88ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=1167.76ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=179.54ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=174.08ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=536.10ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=50kbit, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=1788.05ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=12.76ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=35.47ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=229.17ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=1074.33ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=25.41ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=45.12ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=262.60ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=1125.22ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=61.77ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=209.36ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=266.40ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=1125.95ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=163.10ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=10%, Delay=20ms
+Result: Delivery=81.00%, Latency=601.86ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=386.64ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=100kbit, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=1066.33ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=5.97ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=28.61ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=212.33ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=1042.06ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=6.14ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=31.20ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=224.45ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=1057.17ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=25.82ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=146.07ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=359.13ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=1026.33ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=1361.31ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=218.27ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=816.90ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=250kbit, Loss=10%, Delay=500ms
+Result: Delivery=98.00%, Latency=1038.78ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=3.14ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=27.06ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=206.97ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=1020.27ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=7.19ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=55.76ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=230.88ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=1009.63ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=23.10ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=67.57ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=356.02ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=1067.10ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=89.05ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=187.37ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=391.69ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=1mbit, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=1051.43ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=1.31ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=1.29ms==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=1.37ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=1.28ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=1.24ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=1.20ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=1.21ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=1.25ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=1.28ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=1.34ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=1.43ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=1.26ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=1.26ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=1.31ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=1.35ms
+Running: Proto=mqtt, Size=16, Rate=10, BW=0, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=1.31ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=100.69ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=249.54ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=503.97ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=935.28ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=141.26ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=250.84ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=504.72ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=1200.62ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=185.50ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=325.06ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=649.62ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=1550.02ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=453.30ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=606.97ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=10%, Delay=100ms
+Result: Delivery=70.10%, Latency=645.09ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=50kbit, Loss=10%, Delay=500ms
+Result: Delivery=111.80%, Latency=2655.10ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=0%, Delay=0ms
+Result: Delivery=101.20%, Latency=103.89ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=98.79ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=368.93ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=827.76ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=69.74ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=113.63ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=401.04ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=820.69ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=193.44ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=197.62ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=484.22ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=1389.00ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=353.48ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=402.64ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=489.46ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=100kbit, Loss=10%, Delay=500ms
+Result: Delivery=99.40%, Latency=2190.20ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=5.89ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=63.63ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=259.64ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=732.47ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=44.63ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=86.67ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=308.90ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=736.37ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=120.30ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=144.39ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=328.51ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=843.67ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=240.75ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=266.99ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=523.10ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=250kbit, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=885.76ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=2.34ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=52.26ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=214.86ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=713.02ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=23.86ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=71.11ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=241.42ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=681.87ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=84.57ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=130.56ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=5%, Delay=100ms==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 50kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 100kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 5%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 250kbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 10%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 20ms
+Jitter         : +/- 2ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 100ms
+Jitter         : +/- 10ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+
+Result: Delivery=100.00%, Latency=293.94ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=711.09ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=224.15ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=408.25ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=313.75ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=1mbit, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=1222.68ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=0.79ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=0.72ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=0.69ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=0.66ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=0.70ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=0.70ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=0.90ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=1.02ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=0.91ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=0.78ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=0.86ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=0.75ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=0.74ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=0.70ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=0.64ms
+Running: Proto=mqtt, Size=16, Rate=100, BW=0, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=0.66ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=45.31ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=70.15ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=164.03ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=1113.96ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=66.64ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=66.39ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=165.38ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=989.46ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=43.12ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=65.72ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=299.01ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=1200.08ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=116.95ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=94.53ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=232.87ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=50kbit, Loss=10%, Delay=500ms
+Result: Delivery=80.00%, Latency=928.02ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=23.86ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=47.91ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=137.89ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=1067.49ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=22.78ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=47.59ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=142.50ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=844.78ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=46.02ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=47.97ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=319.44ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=1371.22ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=47.35ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=186.75ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=141.01ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=100kbit, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=1209.96ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=10.80ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=36.99ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=130.52ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=0%, Delay=500ms
+Result: Delivery=100.00%, Latency=1184.92ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=1%, Delay=0ms
+Result: Delivery=100.00%, Latency=11.01ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=1%, Delay=20ms
+Result: Delivery=100.00%, Latency=35.93ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=1%, Delay=100ms
+Result: Delivery=100.00%, Latency=135.58ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=1%, Delay=500ms
+Result: Delivery=100.00%, Latency=950.33ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=5%, Delay=0ms
+Result: Delivery=100.00%, Latency=31.68ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=5%, Delay=20ms
+Result: Delivery=100.00%, Latency=34.98ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=5%, Delay=100ms
+Result: Delivery=100.00%, Latency=136.73ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=5%, Delay=500ms
+Result: Delivery=100.00%, Latency=1525.59ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=10%, Delay=0ms
+Result: Delivery=100.00%, Latency=33.30ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=10%, Delay=20ms
+Result: Delivery=100.00%, Latency=87.60ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=10%, Delay=100ms
+Result: Delivery=100.00%, Latency=259.93ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=250kbit, Loss=10%, Delay=500ms
+Result: Delivery=100.00%, Latency=1528.95ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=1mbit, Loss=0%, Delay=0ms
+Result: Delivery=100.00%, Latency=4.46ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=1mbit, Loss=0%, Delay=20ms
+Result: Delivery=100.00%, Latency=32.33ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=1mbit, Loss=0%, Delay=100ms
+Result: Delivery=100.00%, Latency=124.45ms
+Running: Proto=mqtt, Size=128, Rate=1, BW=1mbit, Loss=0%, Delay=500ms==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 500ms
+Jitter         : +/- 50ms
+Paket Kaybı    : 0%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0
+==============================================
+Ağ Simülasyonu Ayarlanıyor...
+Bant Genişliği : 1mbit
+Gecikme        : 0ms
+Jitter         : +/- 0ms
+Paket Kaybı    : 1%
+==============================================
+[node1] Trafik kontrol kuralları uygulanıyor...
+[node1] Başarılı.
+[node2] Trafik kontrol kuralları uygulanıyor...
+[node2] Başarılı.
+==============================================
+Ayarlar tamamlandı.
+Kontrol etmek için: docker exec node1 tc qdisc show dev eth0

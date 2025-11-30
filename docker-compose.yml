@@ -1,0 +1,20 @@
+services:
+  node1:
+    build: .
+    container_name: node1
+    cap_add:
+      - NET_ADMIN
+    networks:
+      - sim_net
+
+  node2:
+    build: .
+    container_name: node2
+    cap_add:
+      - NET_ADMIN
+    networks:
+      - sim_net
+
+networks:
+  sim_net:
+    driver: bridge
