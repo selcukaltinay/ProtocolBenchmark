@@ -117,7 +117,8 @@ class CoAPTester:
     def start_receiver(self, collector):
         root = resource.Site()
         root.add_resource(['data'], CoAPResource(collector))
-        asyncio.get_event_loop().create_task(aiocoap.Context.create_server_context(root))
+        # Bind to all IPv4 interfaces
+        asyncio.get_event_loop().create_task(aiocoap.Context.create_server_context(root, bind=('0.0.0.0', 5683)))
         asyncio.get_event_loop().run_forever()
 
     def start_sender(self, size, rate, duration):
@@ -129,7 +130,17 @@ class CoAPTester:
                 start_loop = time.time()
                 payload = generate_payload(size, i)
                 request = aiocoap.Message(code=aiocoap.PUT, payload=payload, uri=f"coap://{self.host}/data")
-                asyncio.create_task(context.request(request).response)
+                
+                # Fire and forget but log errors if needed
+                async def send_req(req):
+                    try:
+                        await context.request(req).response
+                    except Exception as e:
+                        # print(f"CoAP Send Error: {e}")
+                        pass
+                
+                asyncio.create_task(send_req(request))
+                
                 elapsed = time.time() - start_loop
                 if interval > elapsed: await asyncio.sleep(interval - elapsed)
             await asyncio.sleep(2)

@@ -45,7 +45,7 @@ def parse_results(container_path):
             data = json.load(f)
             
         if not data:
-            return 0, 0, 0, 0
+            return 0, 0, 0
             
         df = pd.DataFrame(data)
         
@@ -60,6 +60,12 @@ def parse_results(container_path):
 
 def main():
     results = []
+    if os.path.exists(RESULTS_FILE):
+        try:
+            results = pd.read_csv(RESULTS_FILE).to_dict('records')
+            print(f"Loaded {len(results)} existing results.")
+        except Exception as e:
+            print(f"Error loading existing results: {e}")
     
     print("Deney Başlıyor...")
     total_combinations = len(PROTOCOLS) * len(PAYLOAD_SIZES) * len(RATES) * len(BANDWIDTHS) * len(LOSSES) * len(DELAYS)
@@ -77,6 +83,25 @@ def main():
                 for bw in BANDWIDTHS:
                     for loss in LOSSES:
                         for delay in DELAYS:
+                            # Check if already done
+                            if os.path.exists(RESULTS_FILE):
+                                try:
+                                    existing_df = pd.read_csv(RESULTS_FILE)
+                                    is_done = existing_df[
+                                        (existing_df['Protocol'] == proto) &
+                                        (existing_df['Size'] == size) &
+                                        (existing_df['Rate'] == rate) &
+                                        (existing_df['Bandwidth'] == bw) &
+                                        (existing_df['Loss'] == loss) &
+                                        (existing_df['ConfigDelay_ms'] == delay)
+                                    ].shape[0] > 0
+                                    
+                                    if is_done:
+                                        print(f"Skipping (Already done): Proto={proto}, Size={size}, Rate={rate}, BW={bw}, Loss={loss}, Delay={delay}ms")
+                                        continue
+                                except Exception as e:
+                                    print(f"Error checking existing results: {e}")
+
                             print(f"Running: Proto={proto}, Size={size}, Rate={rate}, BW={bw}, Loss={loss}, Delay={delay}ms")
                             
                             # 1. Ağı Ayarla
