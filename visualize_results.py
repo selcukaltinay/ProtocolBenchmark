@@ -2,17 +2,27 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
+import glob
 
 # Klasör oluştur
 if not os.path.exists("plots"):
     os.makedirs("plots")
 
 # Veriyi oku
-try:
-    df = pd.read_csv("experiment_results.csv")
-except FileNotFoundError:
-    print("Sonuç dosyası bulunamadı!")
-    exit(1)
+# Load results
+all_files = glob.glob("results_*.csv")
+df_list = []
+for filename in all_files:
+    try:
+        df = pd.read_csv(filename)
+        df_list.append(df)
+    except: pass
+
+if df_list:
+    df = pd.concat(df_list, ignore_index=True)
+else:
+    print("No results found.")
+    exit()
 
 # Veri tiplerini düzenle
 # Bandwidth '50kbit' gibi string geliyor, sıralama için sayısal değere çevirelim (sadece sıralama için)

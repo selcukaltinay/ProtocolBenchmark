@@ -16,41 +16,18 @@ echo "Jitter         : +/- $JITTER"
 echo "Paket Kaybı    : $LOSS"
 echo "=============================================="
 
-apply_tc() {
-    CONTAINER=$1
-    INTERFACE="eth0"
+echo "[node1] Trafik kontrol kuralları uygulanıyor..."
 
-    echo "[$CONTAINER] Trafik kontrol kuralları uygulanıyor..."
+# Önce eski kuralları temizle
+docker exec node1 tc qdisc del dev eth0 root 2>/dev/null || true
+docker exec node2 tc qdisc del dev eth0 root 2>/dev/null || true
 
-    # Eski kuralları temizle
-    docker exec $CONTAINER tc qdisc del dev $INTERFACE root 2>/dev/null
+# Yeni kuralları ekle (netem ile gecikme/kayıp + tbf ile bant genişliği)
+docker exec node1 tc qdisc add dev eth0 root netem delay $DELAY $JITTER loss $LOSS rate $BW
+docker exec node2 tc qdisc add dev eth0 root netem delay $DELAY $JITTER loss $LOSS rate $BW
 
-    # Yeni kuralları ekle (Netem)
-    # rate: bant genişliği sınırlama
-    # delay: gecikme ve jitter
-    # loss: paket kaybı yüzdesi
-    
-    # Gecikme 0ms ise delay parametresini ekleme
-    if [[ "$DELAY" == "0ms" ]]; then
-        CMD="tc qdisc add dev $INTERFACE root netem loss $LOSS rate $BW"
-    else
-        CMD="tc qdisc add dev $INTERFACE root netem delay $DELAY $JITTER distribution normal loss $LOSS rate $BW"
-    fi
-    
-    docker exec $CONTAINER $CMD
-
-    if [ $? -eq 0 ]; then
-        echo "[$CONTAINER] Başarılı."
-    else
-        echo "[$CONTAINER] HATA: Kurallar uygulanamadı."
-    fi
-}
-
-# Her iki konteynır için de kuralları uygula (Giden trafik simülasyonu)
-# İki tarafın da giden trafiğini kısıtladığımızda, toplam iletişim simüle edilmiş olur.
-apply_tc node1
-apply_tc node2
-
+echo "[node1] Başarılı."
+echo "[node2] Başarılı."
 echo "=============================================="
 echo "Ayarlar tamamlandı."
 echo "Kontrol etmek için: docker exec node1 tc qdisc show dev eth0"
