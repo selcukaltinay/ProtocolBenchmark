@@ -1,0 +1,126 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.lpwan.bench</groupId>
+  <artifactId>protocol-benchmark</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>protocol-benchmark</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
+    <repositories>
+        <repository>
+            <id>github-zenoh</id>
+            <url>https://maven.pkg.github.com/eclipse-zenoh/zenoh-java</url>
+        </repository>
+        <repository>
+            <id>eclipse-zenoh</id>
+            <url>https://repo.eclipse.org/content/repositories/zenoh-releases/</url>
+        </repository>
+        <repository>
+            <id>eclipse-zenoh-snapshots</id>
+            <url>https://repo.eclipse.org/content/repositories/zenoh-snapshots/</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+  <dependencies>
+    <!-- MQTT -->
+    <dependency>
+      <groupId>org.eclipse.paho</groupId>
+      <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+      <version>1.2.5</version>
+    </dependency>
+
+    <!-- AMQP (RabbitMQ) -->
+    <dependency>
+      <groupId>com.rabbitmq</groupId>
+      <artifactId>amqp-client</artifactId>
+      <version>5.16.0</version>
+    </dependency>
+
+    <!-- CoAP (Californium) -->
+    <dependency>
+      <groupId>org.eclipse.californium</groupId>
+      <artifactId>californium-core</artifactId>
+      <version>3.8.0</version>
+    </dependency>
+    
+    <!-- Zenoh -->
+    <dependency>
+        <groupId>org.eclipse.zenoh</groupId>
+        <artifactId>zenoh-java</artifactId>
+        <version>1.0.0-dev-40-g7e48b40-SNAPSHOT</version>
+    </dependency>
+
+    <!-- HTTP (Apache HttpClient) -->
+    <dependency>
+        <groupId>org.apache.httpcomponents.client5</groupId>
+        <artifactId>httpclient5</artifactId>
+        <version>5.2.1</version>
+    </dependency>
+    
+    <!-- JSON -->
+    <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20230227</version>
+    </dependency>
+    
+    <!-- XMPP (Smack) -->
+    <dependency>
+        <groupId>org.igniterealtime.smack</groupId>
+        <artifactId>smack-tcp</artifactId>
+        <version>4.4.6</version>
+    </dependency>
+    <dependency>
+        <groupId>org.igniterealtime.smack</groupId>
+        <artifactId>smack-java8</artifactId>
+        <version>4.4.6</version>
+    </dependency>
+    <dependency>
+        <groupId>org.igniterealtime.smack</groupId>
+        <artifactId>smack-im</artifactId>
+        <version>4.4.6</version>
+    </dependency>
+    <dependency>
+        <groupId>org.igniterealtime.smack</groupId>
+        <artifactId>smack-extensions</artifactId>
+        <version>4.4.6</version>
+    </dependency>
+
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.4.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>com.lpwan.bench.Main</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

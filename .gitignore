@@ -5,3 +5,4 @@ __pycache__/
 .env
 temp_results.json
 results/
+settings.xml

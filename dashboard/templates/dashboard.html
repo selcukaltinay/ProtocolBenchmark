@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPWAN Benchmark | Next-Gen Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-light: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --accent-blue: #2563eb;
+            --accent-green: #16a34a;
+            --accent-purple: #7c3aed;
+            --accent-red: #dc2626;
+            --border-color: #e2e8f0;
+            --card-radius: 16px;
+            --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-start {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        .btn-stop {
+            background: var(--accent-red);
+            color: white;
+        }
+
+        .btn-refresh {
+            background: var(--accent-blue);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+            filter: brightness(1.1);
+        }
+
+        /* Status Badge */
+        .status-badge {
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-running {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+
+        .status-stopped {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+        }
+
+        .timestamp {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--card-radius);
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* Progress Bar */
+        .progress-bar-container {
+            height: 10px;
+            background: #f1f5f9;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        /* Protocol Grid */
+        .protocol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .protocol-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--card-radius);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .protocol-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .protocol-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-blue);
+        }
+
+        .protocol-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            text-transform: uppercase;
+        }
+
+        .protocol-stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .protocol-stat span {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .mini-progress {
+            height: 6px;
+            background: #f1f5f9;
+            border-radius: 3px;
+            margin-top: 12px;
+            overflow: hidden;
+        }
+
+        .mini-progress-fill {
+            height: 100%;
+            background: var(--accent-green);
+            transition: width 0.5s ease;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 25px;
+            padding: 6px;
+            background: #f1f5f9;
+            border-radius: 12px;
+            width: fit-content;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .tab.active {
+            background: white;
+            color: var(--accent-blue);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .tab:hover:not(.active) {
+            color: var(--text-primary);
+            background: #e2e8f0;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Charts */
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 350px;
+            width: 100%;
+        }
+
+        .chart-wrapper {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .chart-wrapper h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        /* Heatmap Table */
+        .heatmap-container {
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+
+        .heatmap-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 4px;
+            font-size: 0.9rem;
+        }
+
+        .heatmap-table th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 700;
+            color: var(--text-secondary);
+            background: #f8fafc;
+            border-radius: 6px;
+        }
+
+        .heatmap-table td {
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: 600;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .heatmap-table td:hover {
+            transform: scale(1.05);
+            z-index: 10;
+            cursor: default;
+        }
+
+        .heatmap-row-header {
+            background: #f8fafc;
+            color: var(--text-primary) !important;
+            text-shadow: none !important;
+            text-align: left !important;
+            font-weight: 700;
+            width: 150px;
+        }
+
+        /* Stats Table */
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .stats-table th {
+            background: #f1f5f9;
+            color: var(--text-secondary);
+            padding: 12px;
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .stats-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .stats-table tr:hover {
+            background: #f8fafc;
+        }
+
+        /* Logs */
+        .logs-content {
+            background: #1e293b;
+            color: #4ade80;
+            font-family: 'Fira Code', monospace;
+            padding: 20px;
+            border-radius: 12px;
+            height: 400px;
+            overflow-y: auto;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        /* Filters */
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .filter-group select {}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header animate-in" style="animation-delay: 0.1s;">
+            <h1>🚀 LPWAN Benchmark</h1>
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
+                <div style="text-align: right;">
+                    <span id="statusBadge" class="status-badge status-stopped">⏸ Durduruldu</span>
+                    <div class="timestamp" id="lastUpdate">Son güncelleme: -</div>
+                </div>
+                <div class="controls">
+                    <button class="btn btn-start" onclick="startExperiment()">▶ Başlat</button>
+                    <button class="btn btn-stop" onclick="stopExperiment()">⏹ Durdur</button>
+                    <button class="btn btn-refresh" onclick="refreshData()">🔄 Yenile</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overall Progress -->
+        <div class="card animate-in" style="animation-delay: 0.2s;">
+            <h2 style="margin-bottom: 15px;">Genel İlerleme</h2>
+            <div class="progress-bar-container">
+                <div class="progress-fill" id="overallProgress" style="width: 0%"></div>
+            </div>
+            <div
+                style="display: flex; justify-content: space-between; margin-top: 10px; font-weight: 600; color: var(--text-secondary);">
+                <span id="overallStats">0 / 0 test tamamlandı</span>
+                <span id="progressPercentage">0%</span>
+            </div>
+        </div>
+
+        <!-- Protocol Cards -->
+        <div class="protocol-grid animate-in" id="protocolGrid" style="animation-delay: 0.3s;"></div>
+
+        <!-- Tabs -->
+        <div class="tabs animate-in" style="animation-delay: 0.4s;">
+            <div class="tab active" onclick="switchTab('overview')">Genel Bakış</div>
+            <div class="tab" onclick="switchTab('detailed')">Detaylı İstatistikler</div>
+            <div class="tab" onclick="switchTab('network')">Ağ Koşulları</div>
+            <div class="tab" onclick="switchTab('analysis')">Performans Analizi (Heatmap)</div>
+            <div class="tab" onclick="switchTab('filter')">Filtreleme</div>
+        </div>
+
+        <!-- Tab: Overview -->
+        <div id="tab-overview" class="tab-content active">
+            <div class="card">
+                <h2>📊 Protokol Karşılaştırması</h2>
+                <div class="chart-grid">
+                    <div class="chart-container">
+                        <canvas id="comparisonChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="latencyChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="throughputChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab: Detailed Stats -->
+        <div id="tab-detailed" class="tab-content">
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2>📈 Detaylı İstatistikler</h2>
+                    <div class="export-buttons">
+                        <button class="btn-export" onclick="exportData('csv')">📥 CSV İndir</button>
+                        <button class="btn-export" onclick="exportData('json')">📥 JSON İndir</button>
+                    </div>
+                </div>
+                <div style="overflow-x: auto;">
+                    <div id="detailedStatsContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab: Network Conditions -->
+        <div id="tab-network" class="tab-content">
+            <div class="card">
+                <h2>🌐 Ağ Koşulları Bazlı Karşılaştırma</h2>
+                <div class="chart-grid">
+                    <div class="chart-wrapper">
+                        <h3>Bandwidth Bazlı</h3>
+                        <div class="chart-container">
+                            <canvas id="bandwidthChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <h3>Paket Kaybı Bazlı</h3>
+                        <div class="chart-container">
+                            <canvas id="lossChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <h3>Gecikme Bazlı</h3>
+                        <div class="chart-container">
+                            <canvas id="delayChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab: Performance Analysis (Heatmap) -->
+        <div id="tab-analysis" class="tab-content">
+            <div class="card">
+                <h2>🔥 Performans Isı Haritası (Heatmap)</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                    Hücre renkleri performansı gösterir: <span style="color: #16a34a; font-weight: bold;">Yeşil
+                        (İyi)</span> → <span style="color: #dc2626; font-weight: bold;">Kırmızı (Kötü)</span>.
+                </p>
+
+                <!-- Heatmap Filters -->
+                <div class="filter-grid" style="margin-bottom: 25px; max-width: 600px;">
+                    <div class="filter-group">
+                        <label>Gecikme (Delay)</label>
+                        <select id="heatmapDelayFilter" onchange="loadAnalysis()">
+                            <option value="all">Tümü</option>
+                            <option value="0">0 ms</option>
+                            <option value="20">20 ms</option>
+                            <option value="100">100 ms</option>
+                            <option value="500">500 ms</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Paket Kaybı (Loss)</label>
+                        <select id="heatmapLossFilter" onchange="loadAnalysis()">
+                            <option value="all">Tümü</option>
+                            <option value="0">0%</option>
+                            <option value="1">1%</option>
+                            <option value="5">5%</option>
+                            <option value="10">10%</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 30px;">Latency (Gecikme) Heatmap <small
+                        style="font-weight: normal; font-size: 0.8em;">(Düşük daha iyi)</small></h3>
+                <div class="heatmap-container" id="latencyHeatmap">Yükleniyor...</div>
+
+                <h3 style="margin-top: 40px;">Throughput (Verim) Heatmap <small
+                        style="font-weight: normal; font-size: 0.8em;">(Yüksek daha iyi)</small></h3>
+                <div class="heatmap-container" id="throughputHeatmap">Yükleniyor...</div>
+            </div>
+        </div>
+
+        <!-- Tab: Filter -->
+        <div id="tab-filter" class="tab-content">
+            <div class="card">
+                <h2>🔍 Veri Filtreleme</h2>
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label>Protokol</label>
+                        <select id="filterProtocol" onchange="applyFilters()">
+                            <option value="">Tümü</option>
+                            <option value="mqtt-qos0">MQTT QoS 0</option>
+                            <option value="mqtt-qos1">MQTT QoS 1</option>
+                            <option value="mqtt-qos2">MQTT QoS 2</option>
+                            <option value="amqp-qos0">AMQP QoS 0</option>
+                            <option value="amqp-qos1">AMQP QoS 1</option>
+                            <option value="coap-con">CoAP CON</option>
+                            <option value="coap-non">CoAP NON</option>
+                            <option value="http">HTTP</option>
+                            <option value="xmpp-qos0">XMPP QoS 0</option>
+                            <option value="xmpp-qos1">XMPP QoS 1</option>
+                            <option value="xmpp-qos2">XMPP QoS 2</option>
+                            <option value="zenoh-best-effort">Zenoh Best Effort</option>
+                            <option value="zenoh-reliable">Zenoh Reliable</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Bandwidth</label>
+                        <select id="filterBandwidth" onchange="applyFilters()">
+                            <option value="">Tümü</option>
+                            <option value="50kbit">50 kbit</option>
+                            <option value="100kbit">100 kbit</option>
+                            <option value="250kbit">250 kbit</option>
+                            <option value="1mbit">1 mbit</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Paket Kaybı</label>
+                        <select id="filterLoss" onchange="applyFilters()">
+                            <option value="">Tümü</option>
+                            <option value="0%">0%</option>
+                            <option value="1%">1%</option>
+                            <option value="5%">5%</option>
+                            <option value="10%">10%</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Gecikme (ms)</label>
+                        <select id="filterDelay" onchange="applyFilters()">
+                            <option value="">Tümü</option>
+                            <option value="0">0 ms</option>
+                            <option value="20">20 ms</option>
+                            <option value="100">100 ms</option>
+                            <option value="500">500 ms</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Payload (bytes)</label>
+                        <select id="filterPayload" onchange="applyFilters()">
+                            <option value="">Tümü</option>
+                            <option value="16">16 bytes</option>
+                            <option value="128">128 bytes</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="filteredDataContent" style="margin-top: 20px; overflow-x: auto;"></div>
+            </div>
+        </div>
+
+        <!-- Logs -->
+        <div class="card animate-in" style="animation-delay: 0.5s;">
+            <h2 class="logs-title">📝 Canlı Loglar</h2>
+            <div class="logs-content" id="logsContent">Loglar yükleniyor...</div>
+        </div>
+    </div>
+
+    <script>
+        // Chart.js Global Defaults
+        Chart.defaults.color = '#64748b';
+        Chart.defaults.borderColor = '#e2e8f0';
+        Chart.defaults.font.family = "'Outfit', sans-serif";
+
+        let comparisonChart = null;
+        let latencyChart = null;
+        let throughputChart = null;
+        let bandwidthChart = null;
+        let lossChart = null;
+        let delayChart = null;
+
+        // Tab switching
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById('tab-' + tabName).classList.add('active');
+            // Find the tab element that was clicked (or corresponds to the name)
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(t => {
+                if (t.textContent.includes(tabName === 'overview' ? 'Genel' :
+                    tabName === 'detailed' ? 'Detaylı' :
+                        tabName === 'network' ? 'Ağ' :
+                            tabName === 'analysis' ? 'Analiz' : 'Filtre')) {
+                    t.classList.add('active');
+                }
+            });
+
+            // Load data for specific tabs
+            if (tabName === 'detailed') loadDetailedStats();
+            if (tabName === 'network') loadNetworkConditions();
+            if (tabName === 'analysis') loadAnalysis();
+        }
+
+        // Performans Analizi (Heatmap)
+        async function loadAnalysis() {
+            try {
+                // Get filter values
+                const delayFilter = document.getElementById('heatmapDelayFilter')?.value || 'all';
+                const lossFilter = document.getElementById('heatmapLossFilter')?.value || 'all';
+
+                console.log('Loading analysis with filters:', { delayFilter, lossFilter });
+
+                // Build query params
+                const params = new URLSearchParams();
+                if (delayFilter !== 'all') params.append('delay', delayFilter);
+                if (lossFilter !== 'all') params.append('loss', lossFilter);
+
+                const url = '/api/analysis?' + params.toString();
+                console.log('Fetching:', url);
+
+                const response = await fetch(url);
+                const data = await response.json();
+
+                console.log('Received data:', data);
+
+                const protocols = Object.keys(data);
+                if (protocols.length === 0) {
+                    document.getElementById('latencyHeatmap').innerHTML = '<p style="color: var(--text-secondary);">Seçilen filtreler için veri bulunamadı.</p>';
+                    document.getElementById('throughputHeatmap').innerHTML = '<p style="color: var(--text-secondary);">Seçilen filtreler için veri bulunamadı.</p>';
+                    return;
+                }
+
+                // Rates (Sütunlar)
+                const rates = data[protocols[0]].rates;
+
+                // --- Latency Heatmap ---
+                let latencyHtml = '<table class="heatmap-table"><thead><tr><th class="heatmap-row-header">Protokol</th>';
+                rates.forEach(r => latencyHtml += `<th>${r} msg/s</th>`);
+                latencyHtml += '</tr></thead><tbody>';
+
+                // Find min/max for normalization
+                let minLat = Infinity, maxLat = -Infinity;
+                protocols.forEach(p => {
+                    data[p].latency.forEach(v => {
+                        if (v !== null) {
+                            if (v < minLat) minLat = v;
+                            if (v > maxLat) maxLat = v;
+                        }
+                    });
+                });
+
+                protocols.forEach(proto => {
+                    latencyHtml += `<tr><td class="heatmap-row-header">${proto}</td>`;
+                    data[proto].latency.forEach(val => {
+                        if (val === null) {
+                            latencyHtml += '<td style="background: #f1f5f9; color: #94a3b8;">-</td>';
+                        } else {
+                            // Normalize (0 = best/green, 1 = worst/red)
+                            const norm = (val - minLat) / (maxLat - minLat || 1);
+                            const hue = 120 * (1 - norm); // 120 (Green) -> 0 (Red)
+                            latencyHtml += `<td style="background: hsl(${hue}, 70%, 45%);">${val.toFixed(1)} ms</td>`;
+                        }
+                    });
+                    latencyHtml += '</tr>';
+                });
+                latencyHtml += '</tbody></table>';
+                document.getElementById('latencyHeatmap').innerHTML = latencyHtml;
+
+                // --- Throughput Heatmap ---
+                let throughputHtml = '<table class="heatmap-table"><thead><tr><th class="heatmap-row-header">Protokol</th>';
+                rates.forEach(r => throughputHtml += `<th>${r} msg/s</th>`);
+                throughputHtml += '</tr></thead><tbody>';
+
+                // Find min/max
+                let minTp = Infinity, maxTp = -Infinity;
+                protocols.forEach(p => {
+                    data[p].throughput.forEach(v => {
+                        if (v !== null) {
+                            if (v < minTp) minTp = v;
+                            if (v > maxTp) maxTp = v;
+                        }
+                    });
+                });
+
+                protocols.forEach(proto => {
+                    throughputHtml += `<tr><td class="heatmap-row-header">${proto}</td>`;
+                    data[proto].throughput.forEach(val => {
+                        if (val === null) {
+                            throughputHtml += '<td style="background: #f1f5f9; color: #94a3b8;">-</td>';
+                        } else {
+                            // Normalize (0 = worst/red, 1 = best/green)
+                            const norm = (val - minTp) / (maxTp - minTp || 1);
+                            const hue = 120 * norm; // 0 (Red) -> 120 (Green)
+                            throughputHtml += `<td style="background: hsl(${hue}, 70%, 45%);">${(val / 1024).toFixed(1)} KB/s</td>`;
+                        }
+                    });
+                    throughputHtml += '</tr>';
+                });
+                throughputHtml += '</tbody></table>';
+                document.getElementById('throughputHeatmap').innerHTML = throughputHtml;
+
+            } catch (error) {
+                console.error('Analiz yüklenirken hata:', error);
+                document.getElementById('latencyHeatmap').innerHTML = 'Veri yüklenemedi.';
+                document.getElementById('throughputHeatmap').innerHTML = 'Veri yüklenemedi.';
+            }
+        }
+
+        // Karşılaştırma grafiklerini yükle
+        async function loadComparison() {
+            try {
+                const response = await fetch('/api/comparison');
+                const data = await response.json();
+
+                if (data.length === 0) return;
+
+                const protocols = data.map(d => d.protocol);
+                const deliveryRatios = data.map(d => d.avg_delivery);
+                const latencies = data.map(d => d.avg_latency);
+                const throughputs = data.map(d => d.avg_throughput);
+
+                // Delivery Ratio Chart
+                const ctx1 = document.getElementById('comparisonChart');
+                if (comparisonChart) comparisonChart.destroy();
+
+                comparisonChart = new Chart(ctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: protocols,
+                        datasets: [{
+                            label: 'Ortalama Delivery Ratio (%)',
+                            data: deliveryRatios,
+                            backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                            borderColor: '#3b82f6',
+                            borderWidth: 1,
+                            borderRadius: 6
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: { beginAtZero: true, max: 100 }
+                        },
+                        plugins: { legend: { display: false } }
+                    }
+                });
+
+                // Latency Chart
+                const ctx2 = document.getElementById('latencyChart');
+                if (latencyChart) latencyChart.destroy();
+
+                latencyChart = new Chart(ctx2, {
+                    type: 'line',
+                    data: {
+                        labels: protocols,
+                        datasets: [{
+                            label: 'Ortalama Latency (ms)',
+                            data: latencies,
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            borderColor: '#10b981',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: '#ffffff',
+                            pointBorderWidth: 2,
+                            pointRadius: 5
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: { y: { beginAtZero: true } },
+                        plugins: { legend: { display: false } }
+                    }
+                });
+
+                // Throughput Chart
+                const ctx3 = document.getElementById('throughputChart');
+                if (throughputChart) throughputChart.destroy();
+
+                throughputChart = new Chart(ctx3, {
+                    type: 'bar',
+                    data: {
+                        labels: protocols,
+                        datasets: [{
+                            label: 'Ortalama Throughput (bps)',
+                            data: throughputs,
+                            backgroundColor: 'rgba(124, 58, 237, 0.7)',
+                            borderColor: '#7c3aed',
+                            borderWidth: 1,
+                            borderRadius: 6
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: { y: { beginAtZero: true } },
+                        plugins: { legend: { display: false } }
+                    }
+                });
+            } catch (error) {
+                console.error('Karşılaştırma yüklenirken hata:', error);
+            }
+        }
+
+        // Verileri yükle
+        async function loadStatus() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+
+                // Status badge güncelle
+                const badge = document.getElementById('statusBadge');
+                if (data.running) {
+                    badge.className = 'status-badge status-running';
+                    badge.innerHTML = '▶ Çalışıyor';
+                } else {
+                    badge.className = 'status-badge status-stopped';
+                    badge.innerHTML = '⏸ Durduruldu';
+                }
+
+                // Genel ilerleme
+                const overall = data.overall;
+                document.getElementById('overallProgress').style.width = overall.percentage + '%';
+                document.getElementById('progressPercentage').textContent = overall.percentage + '%';
+                document.getElementById('overallStats').textContent =
+                    `${overall.completed} / ${overall.total} test tamamlandı`;
+
+                // Protokol kartları
+                const grid = document.getElementById('protocolGrid');
+                grid.innerHTML = '';
+
+                for (const [proto, stats] of Object.entries(data.protocols)) {
+                    const card = document.createElement('div');
+                    card.className = 'protocol-card';
+                    card.innerHTML = `
+                        <div class="protocol-name">${proto}</div>
+                        <div class="protocol-stat"><span>Tamamlanan:</span> ${stats.completed}</div>
+                        <div class="protocol-stat"><span>Toplam:</span> ${stats.total}</div>
+                        <div class="protocol-stat"><span>İlerleme:</span> ${stats.percentage}%</div>
+                        <div class="mini-progress">
+                            <div class="mini-progress-fill" style="width: ${stats.percentage}%"></div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                }
+
+                // Timestamp güncelle
+                document.getElementById('lastUpdate').textContent =
+                    'Son güncelleme: ' + new Date(data.timestamp).toLocaleTimeString('tr-TR');
+
+            } catch (error) {
+                console.error('Status yüklenirken hata:', error);
+            }
+        }
+
+        // Karşılaştırma grafiklerini yükle
+        async function loadComparison() {
+            try {
+                const response = await fetch('/api/comparison');
+                const data = await response.json();
+
+                if (data.length === 0) return;
+
+                const protocols = data.map(d => d.protocol);
+                const deliveryRatios = data.map(d => d.avg_delivery);
+                const latencies = data.map(d => d.avg_latency);
+                const throughputs = data.map(d => d.avg_throughput);
+
+                // Delivery Ratio Chart
+                const ctx1 = document.getElementById('comparisonChart');
+                if (comparisonChart) comparisonChart.destroy();
+
+                comparisonChart = new Chart(ctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: protocols,
+                        datasets: [{
+                            label: 'Ortalama Delivery Ratio (%)',
+                            data: deliveryRatios,
+                            backgroundColor: 'rgba(102, 126, 234, 0.8)',
+                            borderColor: 'rgba(102, 126, 234, 1)',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100
+                            }
+                        }
+                    }
+                });
+
+                // Latency Chart
+                const ctx2 = document.getElementById('latencyChart');
+                if (latencyChart) latencyChart.destroy();
+
+                latencyChart = new Chart(ctx2, {
+                    type: 'line',
+                    data: {
+                        labels: protocols,
+                        datasets: [{
+                            label: 'Ortalama Latency (ms)',
+                            data: latencies,
+                            backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                            borderColor: 'rgba(16, 185, 129, 1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+                // Throughput Chart
+                const ctx3 = document.getElementById('throughputChart');
+                if (throughputChart) throughputChart.destroy();
+
+                throughputChart = new Chart(ctx3, {
+                    type: 'bar',
+                    data: {
+                        labels: protocols,
+                        datasets: [{
+                            label: 'Ortalama Throughput (bps)',
+                            data: throughputs,
+                            backgroundColor: 'rgba(139, 92, 246, 0.8)',
+                            borderColor: 'rgba(139, 92, 246, 1)',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+            } catch (error) {
+                console.error('Karşılaştırma yüklenirken hata:', error);
+            }
+        }
+
+        // Detaylı istatistikleri yükle
+        async function loadDetailedStats() {
+            try {
+                const response = await fetch('/api/detailed-stats');
+                const data = await response.json();
+
+                let html = '<table class="stats-table"><thead><tr><th>Protokol</th><th>Metrik</th><th>Ortalama</th><th>Min</th><th>Max</th><th>Median</th><th>P95</th><th>Std Dev</th></tr></thead><tbody>';
+
+                for (const [proto, stats] of Object.entries(data)) {
+                    if (stats.error) continue;
+
+                    // Delivery stats
+                    const d = stats.delivery;
+                    const deliveryBadge = d.mean >= 95 ? 'badge-good' : d.mean >= 80 ? 'badge-medium' : 'badge-bad';
+                    html += `<tr><td rowspan="4"><strong>${proto.toUpperCase()}</strong></td><td>Delivery Ratio (%)</td><td><span class="metric-badge ${deliveryBadge}">${d.mean}</span></td><td>${d.min}</td><td>${d.max}</td><td>${d.median}</td><td>${d.p95}</td><td>${d.std}</td></tr>`;
+
+                    // Latency stats
+                    const l = stats.latency;
+                    html += `<tr><td>Latency (ms)</td><td>${l.mean}</td><td>${l.min}</td><td>${l.max}</td><td>${l.median}</td><td>${l.p95}</td><td>${l.std}</td></tr>`;
+
+                    // Jitter stats
+                    const j = stats.jitter;
+                    html += `<tr><td>Jitter (ms)</td><td>${j.mean}</td><td>${j.min}</td><td>${j.max}</td><td>${j.median}</td><td>-</td><td>-</td></tr>`;
+
+                    // Throughput stats
+                    const t = stats.throughput;
+                    html += `<tr><td>Throughput (bps)</td><td>${t.mean}</td><td>${t.min}</td><td>${t.max}</td><td>${t.median}</td><td>-</td><td>-</td></tr>`;
+                }
+
+                html += '</tbody></table>';
+                document.getElementById('detailedStatsContent').innerHTML = html;
+
+            } catch (error) {
+                console.error('Detaylı stats yüklenirken hata:', error);
+            }
+        }
+
+        // Ağ koşulları karşılaştırmasını yükle
+        async function loadNetworkConditions() {
+            try {
+                const response = await fetch('/api/network-conditions');
+                const data = await response.json();
+
+                // Bandwidth Chart
+                const bwLabels = Object.keys(data.by_bandwidth);
+                const protocols = ['mqtt-qos0', 'mqtt-qos1', 'amqp-qos0', 'coap-con', 'http'];
+                const colors = ['#667eea', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'];
+
+                const bwDatasets = protocols.map((proto, idx) => ({
+                    label: proto.toUpperCase(),
+                    data: bwLabels.map(bw => data.by_bandwidth[bw][proto]?.delivery || 0),
+                    backgroundColor: colors[idx],
+                    borderColor: colors[idx],
+                    borderWidth: 2
+                }));
+
+                const ctx4 = document.getElementById('bandwidthChart');
+                if (bandwidthChart) bandwidthChart.destroy();
+
+                bandwidthChart = new Chart(ctx4, {
+                    type: 'bar',
+                    data: {
+                        labels: bwLabels,
+                        datasets: bwDatasets
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                title: { display: true, text: 'Delivery Ratio (%)' }
+                            }
+                        }
+                    }
+                });
+
+                // Loss Chart
+                const lossLabels = Object.keys(data.by_loss);
+                const lossDatasets = protocols.map((proto, idx) => ({
+                    label: proto.toUpperCase(),
+                    data: lossLabels.map(loss => data.by_loss[loss][proto]?.delivery || 0),
+                    backgroundColor: colors[idx],
+                    borderColor: colors[idx],
+                    borderWidth: 2
+                }));
+
+                const ctx5 = document.getElementById('lossChart');
+                if (lossChart) lossChart.destroy();
+
+                lossChart = new Chart(ctx5, {
+                    type: 'line',
+                    data: {
+                        labels: lossLabels,
+                        datasets: lossDatasets
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                title: { display: true, text: 'Delivery Ratio (%)' }
+                            }
+                        }
+                    }
+                });
+
+                // Delay Chart
+                const delayLabels = Object.keys(data.by_delay);
+                const delayDatasets = protocols.map((proto, idx) => ({
+                    label: proto.toUpperCase(),
+                    data: delayLabels.map(delay => data.by_delay[delay][proto]?.latency || 0),
+                    backgroundColor: colors[idx],
+                    borderColor: colors[idx],
+                    borderWidth: 2,
+                    fill: false
+                }));
+
+                const ctx6 = document.getElementById('delayChart');
+                if (delayChart) delayChart.destroy();
+
+                delayChart = new Chart(ctx6, {
+                    type: 'line',
+                    data: {
+                        labels: delayLabels,
+                        datasets: delayDatasets
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: { display: true, text: 'Latency (ms)' }
+                            }
+                        }
+                    }
+                });
+
+            } catch (error) {
+                console.error('Network conditions yüklenirken hata:', error);
+            }
+        }
+
+        // Filtreleri uygula
+        async function applyFilters() {
+            const protocol = document.getElementById('filterProtocol').value;
+            const bandwidth = document.getElementById('filterBandwidth').value;
+            const loss = document.getElementById('filterLoss').value;
+            const delay = document.getElementById('filterDelay').value;
+            const payload_size = document.getElementById('filterPayload').value;
+
+            const params = new URLSearchParams();
+            if (protocol) params.append('protocol', protocol);
+            if (bandwidth) params.append('bandwidth', bandwidth);
+            if (loss) params.append('loss', loss);
+            if (delay) params.append('delay', delay);
+            if (payload_size) params.append('payload_size', payload_size);
+
+            try {
+                const response = await fetch('/api/filtered-data?' + params.toString());
+                const data = await response.json();
+
+                let html = `<h3>Filtrelenmiş Sonuçlar (${data.length} kayıt)</h3>`;
+                html += '<table class="stats-table"><thead><tr><th>Protokol</th><th>BW</th><th>Loss</th><th>Delay</th><th>Payload</th><th>Rate</th><th>Delivery %</th><th>Latency ms</th><th>Throughput</th></tr></thead><tbody>';
+
+                data.forEach(row => {
+                    const deliveryBadge = row.DeliveryRatio >= 95 ? 'badge-good' : row.DeliveryRatio >= 80 ? 'badge-medium' : 'badge-bad';
+                    html += `<tr>
+                        <td><strong>${row.Protocol}</strong></td>
+                        <td>${row.Bandwidth}</td>
+                        <td>${row.Loss}</td>
+                        <td>${row.Delay_ms}ms</td>
+                        <td>${row.PayloadSize_bytes}B</td>
+                        <td>${row.Rate_msg_s}/s</td>
+                        <td><span class="metric-badge ${deliveryBadge}">${row.DeliveryRatio.toFixed(2)}</span></td>
+                        <td>${row.LatencyAvg_ms.toFixed(2)}</td>
+                        <td>${row.Throughput_bps.toFixed(0)}</td>
+                    </tr>`;
+                });
+
+                html += '</tbody></table>';
+                document.getElementById('filteredDataContent').innerHTML = html;
+
+            } catch (error) {
+                console.error('Filtre uygulanırken hata:', error);
+            }
+        }
+
+        // Export fonksiyonu
+        function exportData(format) {
+            window.location.href = `/api/export/${format}`;
+        }
+
+        // Logları yükle
+        async function loadLogs() {
+            try {
+                const response = await fetch('/api/logs');
+                const data = await response.json();
+                document.getElementById('logsContent').textContent = data.logs;
+
+                // Auto-scroll to bottom
+                const logsContent = document.getElementById('logsContent');
+                logsContent.scrollTop = logsContent.scrollHeight;
+            } catch (error) {
+                console.error('Loglar yüklenirken hata:', error);
+            }
+        }
+
+        // Testi başlat
+        async function startExperiment() {
+            if (!confirm('Testleri başlatmak istediğinizden emin misiniz?')) return;
+
+            try {
+                const response = await fetch('/api/control/start', { method: 'POST' });
+                const data = await response.json();
+                alert(data.message);
+                setTimeout(refreshData, 2000);
+            } catch (error) {
+                alert('Hata: ' + error);
+            }
+        }
+
+        // Testi durdur
+        async function stopExperiment() {
+            if (!confirm('Testleri durdurmak istediğinizden emin misiniz?')) return;
+
+            try {
+                const response = await fetch('/api/control/stop', { method: 'POST' });
+                const data = await response.json();
+                alert(data.message);
+                setTimeout(refreshData, 1000);
+            } catch (error) {
+                alert('Hata: ' + error);
+            }
+        }
+
+        // Tüm verileri yenile
+        async function refreshData() {
+            await loadStatus();
+            await loadComparison();
+            await loadLogs();
+        }
+
+        // İlk yükleme
+        refreshData();
+
+        // Otomatik yenileme (5 saniyede bir)
+        setInterval(refreshData, 5000);
+    </script>
+</body>
+
+</html>

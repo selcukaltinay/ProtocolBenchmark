@@ -1,0 +1,31 @@
+
+services:
+  node1:
+    build: 
+      context: ./java_bench
+      dockerfile: Dockerfile
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PROTOCOL=${PROTOCOL}
+    networks:
+      - lpwan_net
+    command: /app/entrypoint.sh
+
+  node2:
+    build:
+      context: ./java_bench
+      dockerfile: Dockerfile
+    cap_add:
+      - NET_ADMIN
+    depends_on:
+      - node1
+    environment:
+      - PROTOCOL=${PROTOCOL}
+    networks:
+      - lpwan_net
+    command: /app/entrypoint.sh
+
+networks:
+  lpwan_net:
+    driver: bridge

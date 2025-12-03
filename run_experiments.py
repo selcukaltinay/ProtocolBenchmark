@@ -1,200 +1,197 @@
 import os
-import subprocess
 import time
+import subprocess
+import argparse
 import json
-import pandas as pd
-import numpy as np
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import threading
+import shutil
+from concurrent.futures import ThreadPoolExecutor
 
-# Deney Parametreleri
-PROTOCOLS = ["mqtt", "coap-con", "coap-non", "mqtt-sn", "zenoh", "http", "amqp", "xmpp"]
+# Test Edilecek Protokoller
+PROTOCOLS = {
+    "mqtt-qos0": {"args": ["producer", "mqtt", "node1", "{size}", "{rate}", "{duration}", "0"], "sub_args": ["subscriber", "mqtt", "node1", "0"]},
+    "mqtt-qos1": {"args": ["producer", "mqtt", "node1", "{size}", "{rate}", "{duration}", "1"], "sub_args": ["subscriber", "mqtt", "node1", "1"]},
+    "mqtt-qos2": {"args": ["producer", "mqtt", "node1", "{size}", "{rate}", "{duration}", "2"], "sub_args": ["subscriber", "mqtt", "node1", "2"]},
+    "amqp-qos0": {"args": ["producer", "amqp", "node1", "{size}", "{rate}", "{duration}", "0"], "sub_args": ["subscriber", "amqp", "node1", "0"]},
+    "amqp-qos1": {"args": ["producer", "amqp", "node1", "{size}", "{rate}", "{duration}", "1"], "sub_args": ["subscriber", "amqp", "node1", "1"]},
+    "coap-con": {"args": ["producer", "coap", "node1", "{size}", "{rate}", "{duration}", "con"], "sub_args": ["subscriber", "coap", "node1"]},
+    "coap-non": {"args": ["producer", "coap", "node1", "{size}", "{rate}", "{duration}", "non"], "sub_args": ["subscriber", "coap", "node1"]},
+    "http": {"args": ["producer", "http", "node1", "{size}", "{rate}", "{duration}"], "sub_args": ["subscriber", "http", "node1"]},
+    "xmpp-qos0": {"args": ["producer", "xmpp", "node1", "{size}", "{rate}", "{duration}", "0"], "sub_args": ["subscriber", "xmpp", "node1", "0"]},
+    "xmpp-qos1": {"args": ["producer", "xmpp", "node1", "{size}", "{rate}", "{duration}", "1"], "sub_args": ["subscriber", "xmpp", "node1", "1"]},
+    "xmpp-qos2": {"args": ["producer", "xmpp", "node1", "{size}", "{rate}", "{duration}", "2"], "sub_args": ["subscriber", "xmpp", "node1", "2"]},
+    "zenoh-best-effort": {"args": ["producer", "zenoh", "node1", "{size}", "{rate}", "{duration}", "best-effort"], "sub_args": ["subscriber", "zenoh", "node1"]},
+    "zenoh-reliable": {"args": ["producer", "zenoh", "node1", "{size}", "{rate}", "{duration}", "reliable"], "sub_args": ["subscriber", "zenoh", "node1"]}
+}
+
 PAYLOAD_SIZES = [16, 128]
 RATES = [1, 10, 100]
 BANDWIDTHS = ["50kbit", "100kbit", "250kbit", "1mbit"]
-LOSSES = ["0%", "1%", "5%", "10%"]
-DELAYS = [0, 20, 100, 500] # ms
-DURATION = 10 # Her deneyin süresi (saniye)
-RESULTS_DIR = "results"  # Sonuçların kaydedileceği dizin
-RESULTS_FILE = "experiment_results.csv"
+LOSS_RATES = ["0%", "1%", "5%", "10%"]
+DELAYS = ["0ms", "20ms", "100ms", "500ms"]
+DURATION = 10
 
-def run_command(cmd, check=True):
-    result = subprocess.run(cmd, shell=True, check=check, capture_output=True, text=True)
-    if result.stderr:
-        print(f"STDERR: {result.stderr}", flush=True)
-    return result
-
-def setup_network(bw, loss, delay_ms):
-    jitter_ms = int(delay_ms * 0.1)
-    delay_str = f"{delay_ms}ms"
-    jitter_str = f"{jitter_ms}ms"
-    
-    if bw == "0":
-        run_command("docker exec node1 tc qdisc del dev eth0 root 2>/dev/null || true")
-        run_command("docker exec node2 tc qdisc del dev eth0 root 2>/dev/null || true")
-    else:
-        cmd = f"./setup_network.sh {bw} {delay_str} {jitter_str} {loss}"
-        subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
-def parse_results(json_file):
+def run_command(command, check=True):
     try:
-        with open(json_file, 'r') as f:
-            data = json.load(f)
-        
-        if not data:
-            return 0, 0, 0
-            
-        latencies = [d['l'] for d in data]
-        avg_latency = np.mean(latencies) if latencies else 0
-        jitter = np.std(latencies) if latencies else 0
-        received_count = len(data)
-        
-        return received_count, avg_latency, jitter
+        result = subprocess.run(command, shell=True, check=check, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        return result.stdout.strip()
+    except subprocess.CalledProcessError as e:
+        print(f"Error executing: {command}\n{e.stderr}")
+        if check: raise
+        return None
+
+def setup_network_for_container(container_name, bw, loss, delay):
+    try:
+        run_command(f"docker exec {container_name} tc qdisc del dev eth0 root", check=False)
+        cmd = f"docker exec {container_name} tc qdisc add dev eth0 root handle 1: netem delay {delay} loss {loss}"
+        run_command(cmd)
+        cmd = f"docker exec {container_name} tc qdisc add dev eth0 parent 1: handle 2: tbf rate {bw} burst 32kbit latency 400ms"
+        run_command(cmd)
     except Exception as e:
-        return 0, 0, 0
+        print(f"Network setup failed for {container_name}: {e}")
 
-# Thread-safe lock for network configuration
-network_lock = threading.Lock()
-
-def run_protocol_tests(proto):
-    """Run all tests for a single protocol"""
-    print(f"[{proto}] Starting protocol tests...", flush=True)
+def worker(proto_name):
+    safe_proto = proto_name.replace("-", "_")
+    project_name = f"bench_{safe_proto}"
     
-    # Protokole özel sonuç dosyası
-    safe_proto = proto.replace('-', '_')
-    proto_file = os.path.join(RESULTS_DIR, f"results_{safe_proto}.csv")
+    print(f"[{proto_name}] Building and Starting Environment...")
     
-    results = []
-    if os.path.exists(proto_file):
-        try:
-            results = pd.read_csv(proto_file).to_dict('records')
-        except: pass
-
+    compose_cmd = f"PROTOCOL={proto_name} docker compose -p {project_name} -f docker-compose-java.yml"
+    run_command(f"{compose_cmd} down -v", check=False)
+    run_command(f"{compose_cmd} up -d --build")
+    
+    # Bekle ki servisler başlasın
+    wait_time = 30 if "amqp" in proto_name else 10
+    print(f"[{proto_name}] Waiting {wait_time}s for services to initialize...")
+    time.sleep(wait_time)
+    
     for size in PAYLOAD_SIZES:
         for rate in RATES:
             for bw in BANDWIDTHS:
-                for loss in LOSSES:
+                for loss in LOSS_RATES:
                     for delay in DELAYS:
-                        # Check if done
-                        is_done = False
-                        for r in results:
-                            if (r['Protocol'] == proto and r['Size'] == size and 
-                                r['Rate'] == rate and r['Bandwidth'] == bw and 
-                                r['Loss'] == loss and r['ConfigDelay_ms'] == delay):
-                                # Başarılıysa veya %100 kayıpsa atla
-                                if r['DeliveryRatio'] > 0 or loss == "100%":
-                                    is_done = True
-                                break
+                        if rate == 100 and bw == "50kbit": continue
                         
-                        if is_done:
-                            print(f"[{proto}] Skipping (Already done): Size={size}, Rate={rate}, BW={bw}, Loss={loss}, Delay={delay}ms")
-                            continue
-                            
-                        print(f"[{proto}] Running: Size={size}, Rate={rate}, BW={bw}, Loss={loss}, Delay={delay}ms")
+                        node1_name = f"{project_name}-node1-1"
+                        node2_name = f"{project_name}-node2-1"
                         
-                        # 1. Ağı Ayarla (thread-safe)
-                        with network_lock:
-                            setup_network(bw, loss, delay)
-                            time.sleep(1)  # Ağ ayarlarının uygulanması için kısa bekleme
+                        # Network Setup
+                        setup_network_for_container(node1_name, bw, loss, delay)
+                        setup_network_for_container(node2_name, bw, loss, delay)
                         
-                        # 2. Node1'de Receiver Başlat
-                        # Sadece bu protokole ait processı öldür (proto marker kullanarak)
-                        run_command(f"docker exec node1 pkill -f 'traffic_agent.py.*--proto {proto}' || true", check=False)
-                        time.sleep(1)
+                        # Prepare args
+                        config = PROTOCOLS[proto_name]
+                        prod_args = [arg.format(size=size, rate=rate, duration=DURATION) for arg in config["args"]]
+                        sub_args = config["sub_args"]
                         
-                        # Protokole özel script dosyaları (her protokol için farklı isim)
-                        receiver_script_file = os.path.join(RESULTS_DIR, f"run_receiver_{safe_proto}.sh")
-                        sender_script_file = os.path.join(RESULTS_DIR, f"run_sender_{safe_proto}.sh")
+                        prod_cmd = "java -jar /app/bench.jar " + " ".join(prod_args)
+                        sub_cmd = "java -jar /app/bench.jar " + " ".join(sub_args)
                         
-                        receiver_script_content = f"python3 -u traffic_agent.py --mode receiver --proto {proto} > /tmp/agent_{safe_proto}.log 2>&1"
-                        with open(receiver_script_file, "w") as f:
-                            f.write(receiver_script_content)
-                        os.chmod(receiver_script_file, 0o755)
+                        # Start Subscriber
+                        run_command(f"docker exec {node1_name} pkill -f 'java -jar'", check=False)
+                        # Run subscriber in /tmp/{proto} to isolate results
+                        run_command(f"docker exec {node1_name} mkdir -p /tmp/{safe_proto}")
                         
-                        # Docker'a script dosyasının tam yolunu ver (volume mount ile /app altında)
-                        script_name = f"run_receiver_{safe_proto}.sh"
-                        run_command(f"docker exec -d node1 sh /app/{RESULTS_DIR}/{script_name}")
-                        time.sleep(5) # Receiver'ın başlaması için bekle                        
-                        
-                        # 3. Node2'de Sender Başlat
-                        sender_script_content = f"python3 -u traffic_agent.py --mode sender --proto {proto} --host node1 --size {size} --rate {rate} --duration {DURATION} > /tmp/sender_{safe_proto}.log 2>&1"
-                        with open(sender_script_file, "w") as f:
-                            f.write(sender_script_content)
-                        os.chmod(sender_script_file, 0o755)
-                        
-                        script_name = f"run_sender_{safe_proto}.sh"
-                        run_command(f"docker exec node2 sh /app/{RESULTS_DIR}/{script_name}", check=False)
-                        
-                        # 4. Receiver'ı Durdur (sadece bu protokole ait)
-                        run_command(f"docker exec node1 pkill -SIGTERM -f 'traffic_agent.py.*--proto {proto}' || true", check=False)
+                        full_sub_cmd = f"cd /tmp/{safe_proto} && {sub_cmd}"
+                        run_command(f"docker exec -d {node1_name} sh -c '{full_sub_cmd}'")
                         time.sleep(2)
                         
-                        # 5. Sonuçları Al (protokole özel dosya)
-                        temp_results_file = os.path.join(RESULTS_DIR, f"temp_results_{safe_proto}.json")
-                        if os.path.exists(temp_results_file): os.remove(temp_results_file)
-                        run_command(f"docker cp node1:/app/results.json {temp_results_file}", check=False)
+                        # Start Producer
+                        prod_output = run_command(f"docker exec {node2_name} {prod_cmd}", check=False)
                         
-                        # 6. Parse ve Kaydet
-                        received_count, avg_latency, jitter = parse_results(temp_results_file)
+                        actual_sent = int(rate * DURATION)
+                        if prod_output:
+                            for line in prod_output.splitlines():
+                                if "BENCHMARK_SENT_COUNT:" in line:
+                                    try:
+                                        actual_sent = int(line.split(":")[1].strip())
+                                    except:
+                                        pass
                         
-                        expected_count = rate * DURATION
-                        delivery_ratio = (received_count / expected_count) * 100 if expected_count > 0 else 0
-                        throughput = (received_count * size * 8) / DURATION
+                        # Stop Subscriber
+                        run_command(f"docker exec {node1_name} pkill -SIGTERM -f 'java -jar'", check=False)
+                        time.sleep(1)
                         
-                        result_row = {
-                            "Protocol": proto,
-                            "Size": size,
-                            "Rate": rate,
-                            "Bandwidth": bw,
-                            "Loss": loss,
-                            "ConfigDelay_ms": delay,
-                            "Sent": expected_count,
-                            "Received": received_count,
-                            "DeliveryRatio": delivery_ratio,
-                            "LatencyAvg_ms": avg_latency,
-                            "Jitter_ms": jitter,
-                            "Throughput_bps": throughput
-                        }
+                        # Collect Results
+                        param_str = f"s{size}_r{rate}_bw{bw}_l{loss}_d{delay}"
+                        temp_csv = f"results/temp_{safe_proto}_{param_str}.csv"
                         
-                        results.append(result_row)
-                        print(f"[{proto}] Result: Delivery={delivery_ratio:.2f}%, Latency={avg_latency:.2f}ms")
-                        
-                        # Thread-safe dosya yazma
-                        pd.DataFrame(results).to_csv(proto_file, index=False)
-    
-    print(f"[{proto}] Tamamlandı. Temizleniyor...")
-    return proto
-
-def main():
-    print("Deney Başlıyor (Paralel Mod - Protokol Seviyesinde)...")
-    
-    # Results dizinini oluştur
-    os.makedirs(RESULTS_DIR, exist_ok=True)
-    print(f"Sonuçlar '{RESULTS_DIR}/' dizinine kaydedilecek.")
-    
-    # Konteynırları başlat
-    print("Ortam hazırlanıyor...")
-    run_command("docker compose down")
-    run_command("docker compose up -d --build")
-    time.sleep(20) # Servislerin açılması için bekle
-    
-    # Paralel olarak tüm protokolleri test et
-    print(f"Toplam {len(PROTOCOLS)} protokol paralel olarak test ediliyor...")
-    
-    with ThreadPoolExecutor(max_workers=len(PROTOCOLS)) as executor:
-        # Her protokol için bir thread başlat
-        future_to_proto = {executor.submit(run_protocol_tests, proto): proto for proto in PROTOCOLS}
-        
-        # Tamamlananları takip et
-        for future in as_completed(future_to_proto):
-            proto = future_to_proto[future]
-            try:
-                result = future.result()
-                print(f"✓ [{proto}] Tüm testler tamamlandı!", flush=True)
-            except Exception as exc:
-                print(f"✗ [{proto}] Hata oluştu: {exc}", flush=True)
-
-    print("Tüm deneyler tamamlandı.")
+                        try:
+                            run_command(f"docker cp {node1_name}:/tmp/{safe_proto}/results.csv {temp_csv}", check=False)
+                            
+                            import pandas as pd
+                            if os.path.exists(temp_csv) and os.path.getsize(temp_csv) > 0:
+                                df = pd.read_csv(temp_csv)
+                                expected_count = actual_sent
+                                received_count = len(df)
+                                delivery_ratio = (received_count / expected_count) * 100.0 if expected_count > 0 else 0
+                                avg_latency = df['latency'].mean() if received_count > 0 else 0
+                                throughput = (received_count * size * 8) / DURATION
+                                jitter = df['latency'].std() if received_count > 1 else 0
+                                
+                                result_row = {
+                                    "Protocol": proto_name,
+                                    "Size": size,
+                                    "Rate": rate,
+                                    "Bandwidth": bw,
+                                    "Loss": loss,
+                                    "Delay": delay,
+                                    "ConfigDelay_ms": int(delay.replace('ms', '')),
+                                    "DeliveryRatio": delivery_ratio,
+                                    "LatencyAvg_ms": avg_latency,
+                                    "Jitter_ms": jitter,
+                                    "Throughput_bps": throughput,
+                                    "Timestamp": time.time()
+                                }
+                                
+                                summary_file = f"results/results_{safe_proto}.csv"
+                                summary_df = pd.DataFrame([result_row])
+                                
+                                if not os.path.exists(summary_file):
+                                    summary_df.to_csv(summary_file, index=False)
+                                else:
+                                    summary_df.to_csv(summary_file, mode='a', header=False, index=False)
+                                
+                                os.remove(temp_csv)
+                        except Exception as e:
+                            print(f"[{proto_name}] Error processing: {e}")
 
 if __name__ == "__main__":
-    main()
+    if not os.path.exists("results"):
+        os.makedirs("results")
+        
+    with open("docker-compose-java.yml", "w") as f:
+        f.write("""
+services:
+  node1:
+    build: 
+      context: ./java_bench
+      dockerfile: Dockerfile
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PROTOCOL=${PROTOCOL}
+    networks:
+      - lpwan_net
+    command: /app/entrypoint.sh
+
+  node2:
+    build:
+      context: ./java_bench
+      dockerfile: Dockerfile
+    cap_add:
+      - NET_ADMIN
+    depends_on:
+      - node1
+    environment:
+      - PROTOCOL=${PROTOCOL}
+    networks:
+      - lpwan_net
+    command: /app/entrypoint.sh
+
+networks:
+  lpwan_net:
+    driver: bridge
+""")
+
+    with ThreadPoolExecutor(max_workers=16) as executor:
+        executor.map(worker, PROTOCOLS.keys())
