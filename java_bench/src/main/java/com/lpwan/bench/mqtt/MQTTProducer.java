@@ -17,9 +17,11 @@ public class MQTTProducer {
             MqttConnectOptions connOpts = new MqttConnectOptions();
             connOpts.setCleanSession(false);
             connOpts.setAutomaticReconnect(true);
+            connOpts.setConnectionTimeout(10);  // 10 seconds
+            connOpts.setKeepAliveInterval(30);  // 30 seconds
 
             System.out.println("Connecting to broker: " + broker);
-            client.connect(connOpts).waitForCompletion();
+            client.connect(connOpts).waitForCompletion(15000);  // 15 second timeout
             System.out.println("Connected");
 
             int count = (int) (rate * duration);
@@ -32,7 +34,12 @@ public class MQTTProducer {
                 MqttMessage message = new MqttMessage(payload);
                 message.setQos(qos);
 
-                client.publish("test/topic", message);
+                // For QoS 1/2, wait for acknowledgment to avoid queue overflow
+                if (qos > 0) {
+                    client.publish("test/topic", message).waitForCompletion(30000);  // 30s timeout
+                } else {
+                    client.publish("test/topic", message);
+                }
 
                 long elapsed = System.nanoTime() - start;
                 if (intervalNs > elapsed) {

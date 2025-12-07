@@ -24,13 +24,10 @@ public class XMPPSubscriber {
         try {
             int qosLevel = Integer.parseInt(qos);
 
-            // XMPP server is always at xmpp-server container
-            String xmppHost = "xmpp-server";
-
             XMPPTCPConnectionConfiguration config = XMPPTCPConnectionConfiguration.builder()
                     .setUsernameAndPassword("subscriber", "password")
                     .setXmppDomain("lpwan.local")
-                    .setHost(xmppHost)
+                    .setHost(host)
                     .setPort(5222)
                     .setSecurityMode(ConnectionConfiguration.SecurityMode.disabled)
                     .build();

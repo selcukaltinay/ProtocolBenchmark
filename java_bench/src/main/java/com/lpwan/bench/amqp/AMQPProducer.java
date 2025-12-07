@@ -13,6 +13,9 @@ public class AMQPProducer {
             factory.setHost(host);
             factory.setUsername("test");
             factory.setPassword("test");
+            factory.setConnectionTimeout(10000);  // 10 seconds
+            factory.setHandshakeTimeout(10000);   // 10 seconds
+            factory.setRequestedHeartbeat(30);    // 30 seconds
 
             try (Connection connection = factory.newConnection();
                     Channel channel = connection.createChannel()) {

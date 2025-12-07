@@ -460,7 +460,58 @@
         <!-- Tab: Overview -->
         <div id="tab-overview" class="tab-content active">
             <div class="card">
-                <h2>📊 Protokol Karşılaştırması</h2>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2>📊 Protokol Karşılaştırması</h2>
+                    <button class="btn btn-refresh" onclick="toggleFilters()" style="font-size: 0.9rem;">🎛️ Filtreler</button>
+                </div>
+
+                <!-- Filtreler -->
+                <div id="comparison-filters" style="display: none; background: #f8fafc; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #64748b; font-size: 0.9rem;">Payload Size</label>
+                            <select id="filter-size" onchange="applyFilters()" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0; font-family: 'Outfit', sans-serif;">
+                                <option value="">Tümü</option>
+                                <option value="16">16 bytes</option>
+                                <option value="128">128 bytes</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #64748b; font-size: 0.9rem;">Bandwidth</label>
+                            <select id="filter-bandwidth" onchange="applyFilters()" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0; font-family: 'Outfit', sans-serif;">
+                                <option value="">Tümü</option>
+                                <option value="50kbit">50 kbit</option>
+                                <option value="100kbit">100 kbit</option>
+                                <option value="250kbit">250 kbit</option>
+                                <option value="1mbit">1 mbit</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #64748b; font-size: 0.9rem;">Packet Loss</label>
+                            <select id="filter-loss" onchange="applyFilters()" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0; font-family: 'Outfit', sans-serif;">
+                                <option value="">Tümü</option>
+                                <option value="0%">0%</option>
+                                <option value="1%">1%</option>
+                                <option value="5%">5%</option>
+                                <option value="10%">10%</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #64748b; font-size: 0.9rem;">Delay</label>
+                            <select id="filter-delay" onchange="applyFilters()" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0; font-family: 'Outfit', sans-serif;">
+                                <option value="">Tümü</option>
+                                <option value="0">0 ms</option>
+                                <option value="20">20 ms</option>
+                                <option value="100">100 ms</option>
+                                <option value="500">500 ms</option>
+                            </select>
+                        </div>
+                        <div style="display: flex; align-items: flex-end;">
+                            <button class="btn btn-refresh" onclick="resetFilters()" style="width: 100%;">🔄 Sıfırla</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="chart-grid">
                     <div class="chart-container">
                         <canvas id="comparisonChart"></canvas>
@@ -783,9 +834,42 @@
         }
 
         // Karşılaştırma grafiklerini yükle
+        // Filtre fonksiyonları
+        function toggleFilters() {
+            const filters = document.getElementById('comparison-filters');
+            filters.style.display = filters.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function resetFilters() {
+            document.getElementById('filter-size').value = '';
+            document.getElementById('filter-bandwidth').value = '';
+            document.getElementById('filter-loss').value = '';
+            document.getElementById('filter-delay').value = '';
+            applyFilters();
+        }
+
+        function applyFilters() {
+            loadComparison();
+        }
+
+
         async function loadComparison() {
             try {
-                const response = await fetch('/api/comparison');
+                // Filtreleri al
+            const size = document.getElementById('filter-size').value;
+            const bandwidth = document.getElementById('filter-bandwidth').value;
+            const loss = document.getElementById('filter-loss').value;
+            const delay = document.getElementById('filter-delay').value;
+
+            // Query string oluştur
+            const params = new URLSearchParams();
+            if (size) params.append('size', size);
+            if (bandwidth) params.append('bandwidth', bandwidth);
+            if (loss) params.append('loss', loss);
+            if (delay) params.append('delay', delay);
+
+            const queryString = params.toString() ? `?${params.toString()}` : '';
+            const response = await fetch(`/api/comparison${queryString}`);
                 const data = await response.json();
 
                 if (data.length === 0) return;
@@ -934,7 +1018,21 @@
         // Karşılaştırma grafiklerini yükle
         async function loadComparison() {
             try {
-                const response = await fetch('/api/comparison');
+                // Filtreleri al
+            const size = document.getElementById('filter-size').value;
+            const bandwidth = document.getElementById('filter-bandwidth').value;
+            const loss = document.getElementById('filter-loss').value;
+            const delay = document.getElementById('filter-delay').value;
+
+            // Query string oluştur
+            const params = new URLSearchParams();
+            if (size) params.append('size', size);
+            if (bandwidth) params.append('bandwidth', bandwidth);
+            if (loss) params.append('loss', loss);
+            if (delay) params.append('delay', delay);
+
+            const queryString = params.toString() ? `?${params.toString()}` : '';
+            const response = await fetch(`/api/comparison${queryString}`);
                 const data = await response.json();
 
                 if (data.length === 0) return;

@@ -103,7 +103,7 @@ def get_latest_results():
     
     return results
 
-def get_comparison_data():
+def get_comparison_data(filters=None):
     """Protokoller arası karşılaştırma verisi"""
     comparison = []
 
@@ -114,6 +114,18 @@ def get_comparison_data():
         if os.path.exists(proto_file):
             try:
                 df = pd.read_csv(proto_file)
+
+                # Filtreleri uygula
+                if filters and len(df) > 0:
+                    if filters.get('size'):
+                        df = df[df['Size'] == int(filters['size'])]
+                    if filters.get('bandwidth'):
+                        df = df[df['Bandwidth'] == filters['bandwidth']]
+                    if filters.get('loss'):
+                        df = df[df['Loss'] == filters['loss']]
+                    if filters.get('delay'):
+                        df = df[df['ConfigDelay_ms'] == int(filters['delay'])]
+
                 if len(df) > 0:
                     comparison.append({
                         'protocol': proto,
@@ -295,7 +307,17 @@ def api_results():
 @app.route('/api/comparison')
 def api_comparison():
     """Karşılaştırma API"""
-    comparison = get_comparison_data()
+    # Filtreleri al
+    filters = {
+        'size': request.args.get('size'),
+        'bandwidth': request.args.get('bandwidth'),
+        'loss': request.args.get('loss'),
+        'delay': request.args.get('delay')
+    }
+    # None değerleri temizle
+    filters = {k: v for k, v in filters.items() if v}
+
+    comparison = get_comparison_data(filters if filters else None)
     return jsonify(comparison)
 
 @app.route('/api/control/start', methods=['POST'])
@@ -328,14 +350,28 @@ def api_stop():
 @app.route('/api/logs')
 def api_logs():
     """Son logları getir"""
-    try:
-        with open('experiment_log.txt', 'r') as f:
-            lines = f.readlines()
-            # Son 50 satır
-            recent_lines = lines[-50:] if len(lines) > 50 else lines
-            return jsonify({'logs': ''.join(recent_lines)})
-    except:
-        return jsonify({'logs': 'Log dosyası bulunamadı'})
+    log_files = [
+        '/tmp/final_experiment_run.log',
+        '/tmp/experiment_run.log',
+        '../experiment_log.txt',
+        'experiment_log.txt'
+    ]
+
+    for log_file in log_files:
+        try:
+            if os.path.exists(log_file):
+                with open(log_file, 'r') as f:
+                    lines = f.readlines()
+                    # Son 100 satır
+                    recent_lines = lines[-100:] if len(lines) > 100 else lines
+                    return jsonify({
+                        'logs': ''.join(recent_lines),
+                        'source': log_file
+                    })
+        except:
+            continue
+
+    return jsonify({'logs': 'Log dosyası bulunamadı', 'source': 'none'})
 
 @app.route('/api/detailed-stats')
 def api_detailed_stats():

@@ -13,10 +13,29 @@ elif [[ "$PROTOCOL" == amqp* ]]; then
     rabbitmqctl set_permissions -p / test ".*" ".*" ".*" 2>/dev/null
 elif [[ "$PROTOCOL" == xmpp* ]]; then
     echo "Starting Prosody..."
+    mkdir -p /var/run/prosody
+    chown prosody:prosody /var/run/prosody
+
+    # Start Prosody properly using prosodyctl
     prosodyctl start
-    sleep 5
-    prosodyctl register subscriber lpwan.local password 2>/dev/null
-    prosodyctl register producer lpwan.local password 2>/dev/null
+
+    # Wait for Prosody to be fully ready
+    echo "Waiting for Prosody to start..."
+    for i in {1..10}; do
+        if prosodyctl status 2>&1 | grep -q "is running"; then
+            echo "Prosody started successfully"
+            break
+        fi
+        sleep 1
+    done
+
+    # Register users
+    prosodyctl register subscriber lpwan.local password 2>/dev/null || echo "Subscriber already registered"
+    prosodyctl register producer lpwan.local password 2>/dev/null || echo "Producer already registered"
+
+    # Verify users
+    echo "XMPP users registered. Checking status..."
+    prosodyctl status
 fi
 
 # Sonsuz döngü (Container'ı ayakta tutmak için)

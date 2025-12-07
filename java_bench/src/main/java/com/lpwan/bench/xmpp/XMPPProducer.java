@@ -17,15 +17,13 @@ public class XMPPProducer {
         try {
             int qosLevel = Integer.parseInt(qos);
 
-            // XMPP server is always at xmpp-server container
-            String xmppHost = "xmpp-server";
-
             XMPPTCPConnectionConfiguration config = XMPPTCPConnectionConfiguration.builder()
                     .setUsernameAndPassword("producer", "password")
                     .setXmppDomain("lpwan.local")
-                    .setHost(xmppHost)
+                    .setHost(host)
                     .setPort(5222)
                     .setSecurityMode(ConnectionConfiguration.SecurityMode.disabled)
+                    .setConnectTimeout(15000)  // 15 second connection timeout
                     .build();
 
             AbstractXMPPConnection connection = new XMPPTCPConnection(config);

@@ -10,6 +10,7 @@ public class CoAPProducer {
         try {
             String uri = "coap://" + host + ":5683/data";
             CoapClient client = new CoapClient(uri);
+            client.setTimeout(30000L);  // 30 second timeout
             if (confirmable) {
                 client.useCONs();
             } else {

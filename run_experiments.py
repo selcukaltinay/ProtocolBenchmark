@@ -60,9 +60,28 @@ def worker(proto_name):
     run_command(f"{compose_cmd} up -d --build")
     
     # Bekle ki servisler başlasın
-    wait_time = 30 if "amqp" in proto_name else 10
+    if "amqp" in proto_name:
+        wait_time = 30
+    elif "xmpp" in proto_name:
+        wait_time = 25  # XMPP server needs time to start
+    else:
+        wait_time = 10
+
     print(f"[{proto_name}] Waiting {wait_time}s for services to initialize...")
     time.sleep(wait_time)
+
+    # XMPP için kullanıcıları her iki node'da da kaydet (her node kendi Prosody'sine sahip)
+    if "xmpp" in proto_name:
+        node1_name = f"{project_name}-node1-1"
+        node2_name = f"{project_name}-node2-1"
+        print(f"[{proto_name}] Registering XMPP users on both nodes...")
+        # Node1'de subscriber kaydı (Prosodyctl kullan)
+        run_command(f"docker exec {node1_name} prosodyctl register subscriber lpwan.local password", check=False)
+        run_command(f"docker exec {node1_name} prosodyctl register producer lpwan.local password", check=False)
+        # Node2'de producer kaydı
+        run_command(f"docker exec {node2_name} prosodyctl register producer lpwan.local password", check=False)
+        run_command(f"docker exec {node2_name} prosodyctl register subscriber lpwan.local password", check=False)
+        time.sleep(2)
     
     for size in PAYLOAD_SIZES:
         for rate in RATES:
@@ -114,46 +133,63 @@ def worker(proto_name):
                         # Collect Results
                         param_str = f"s{size}_r{rate}_bw{bw}_l{loss}_d{delay}"
                         temp_csv = f"results/temp_{safe_proto}_{param_str}.csv"
-                        
+
+                        # Initialize default values for failed test
+                        delivery_ratio = 0.0
+                        avg_latency = 0.0
+                        jitter = 0.0
+                        throughput = 0.0
+                        received_count = 0
+                        test_status = "FAILED"
+
                         try:
                             run_command(f"docker cp {node1_name}:/tmp/{safe_proto}/results.csv {temp_csv}", check=False)
-                            
+
                             import pandas as pd
                             if os.path.exists(temp_csv) and os.path.getsize(temp_csv) > 0:
                                 df = pd.read_csv(temp_csv)
                                 expected_count = actual_sent
-                                received_count = len(df)
+                                # Count unique sequence numbers to avoid duplicates
+                                received_count = df['sequence'].nunique() if 'sequence' in df.columns else len(df)
                                 delivery_ratio = (received_count / expected_count) * 100.0 if expected_count > 0 else 0
                                 avg_latency = df['latency'].mean() if received_count > 0 else 0
                                 throughput = (received_count * size * 8) / DURATION
                                 jitter = df['latency'].std() if received_count > 1 else 0
-                                
-                                result_row = {
-                                    "Protocol": proto_name,
-                                    "Size": size,
-                                    "Rate": rate,
-                                    "Bandwidth": bw,
-                                    "Loss": loss,
-                                    "Delay": delay,
-                                    "ConfigDelay_ms": int(delay.replace('ms', '')),
-                                    "DeliveryRatio": delivery_ratio,
-                                    "LatencyAvg_ms": avg_latency,
-                                    "Jitter_ms": jitter,
-                                    "Throughput_bps": throughput,
-                                    "Timestamp": time.time()
-                                }
-                                
-                                summary_file = f"results/results_{safe_proto}.csv"
-                                summary_df = pd.DataFrame([result_row])
-                                
-                                if not os.path.exists(summary_file):
-                                    summary_df.to_csv(summary_file, index=False)
-                                else:
-                                    summary_df.to_csv(summary_file, mode='a', header=False, index=False)
-                                
+                                test_status = "SUCCESS"
                                 os.remove(temp_csv)
+                            else:
+                                print(f"[{proto_name}] No results received for {param_str}")
+                                test_status = "NO_DATA"
                         except Exception as e:
-                            print(f"[{proto_name}] Error processing: {e}")
+                            print(f"[{proto_name}] Error processing {param_str}: {e}")
+                            test_status = f"ERROR: {str(e)[:50]}"
+
+                        # Always write result row, even for failed tests
+                        result_row = {
+                            "Protocol": proto_name,
+                            "Size": size,
+                            "Rate": rate,
+                            "Bandwidth": bw,
+                            "Loss": loss,
+                            "Delay": delay,
+                            "ConfigDelay_ms": int(delay.replace('ms', '')),
+                            "DeliveryRatio": delivery_ratio,
+                            "LatencyAvg_ms": avg_latency,
+                            "Jitter_ms": jitter,
+                            "Throughput_bps": throughput,
+                            "ReceivedCount": received_count,
+                            "ExpectedCount": actual_sent,
+                            "Status": test_status,
+                            "Timestamp": time.time()
+                        }
+
+                        summary_file = f"results/results_{safe_proto}.csv"
+                        summary_df = pd.DataFrame([result_row])
+
+                        if not os.path.exists(summary_file):
+                            summary_df.to_csv(summary_file, index=False)
+                        else:
+                            summary_df.to_csv(summary_file, mode='a', header=False, index=False)
 
 if __name__ == "__main__":
     if not os.path.exists("results"):

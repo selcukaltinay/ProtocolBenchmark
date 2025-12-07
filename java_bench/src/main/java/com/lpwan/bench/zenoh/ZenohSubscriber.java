@@ -55,7 +55,7 @@ public class ZenohSubscriber {
     }
 
     public static void saveResults() {
-        try (FileWriter writer = new FileWriter("zenoh_results.csv")) {
+        try (FileWriter writer = new FileWriter("results.csv")) {
             writer.write("timestamp,sequence,latency\n");
             synchronized (results) {
                 for (Payload.ParsedPayload p : results) {

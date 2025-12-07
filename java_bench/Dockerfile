@@ -1,13 +1,8 @@
-FROM maven:3.9-eclipse-temurin-11 AS build
-WORKDIR /app
-COPY pom.xml .
-COPY settings.xml .
-COPY src ./src
-RUN mvn clean package -DskipTests -s settings.xml
-
 FROM eclipse-temurin:11-jre
 WORKDIR /app
-COPY --from=build /app/target/protocol-benchmark-1.0-SNAPSHOT.jar /app/bench.jar
+
+# Copy pre-built JAR instead of building inside Docker
+COPY target/protocol-benchmark-1.0-SNAPSHOT.jar /app/bench.jar
 
 # Install networking tools
 RUN apt-get update && apt-get install -y \
@@ -18,6 +13,8 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY config/mosquitto.conf /etc/mosquitto/mosquitto.conf
+COPY config/prosody.cfg.lua /etc/prosody/prosody.cfg.lua
+RUN chown root:prosody /etc/prosody/prosody.cfg.lua && chmod 640 /etc/prosody/prosody.cfg.lua
 
 # Entrypoint script
 COPY entrypoint.sh /app/entrypoint.sh
